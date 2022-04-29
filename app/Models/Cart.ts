@@ -1,0 +1,19 @@
+import { DateTime } from 'luxon'
+import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import User from './User'
+
+export default class Cart extends BaseModel {
+  @column({ isPrimary: true })
+  public id: number
+
+  @belongsTo(()=> User,{
+    localKey: 'creatBy'
+  })
+  public user : BelongsTo<typeof User>
+
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public updatedAt: DateTime
+}
