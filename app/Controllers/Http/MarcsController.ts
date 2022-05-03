@@ -7,13 +7,9 @@ import Marc from "App/Models/Marc";
 // import Marcs from "Database/migrations/1651173428104_create_marc_tables";
 
 export default class MarcsController {
-    public index(){
-        const marcs = [
-            {
-                name: 'reik'
-            }
-        ]
-        return {marcs}
+    public async index({response}:HttpContextContract){
+        const marcs = await Marc.query().select('*').from( 'marcs')
+        return response.status(200).json(marcs)
     }
     public async store({request, response}:HttpContextContract){
         const name = request.input('name');

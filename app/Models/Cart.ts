@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column, manyToMany, ManyToMany } from '@ioc:Adonis/Lucid/Orm'
 import User from './User'
+import Product from './Product'
 
 export default class Cart extends BaseModel {
   @column({ isPrimary: true })
@@ -10,6 +11,10 @@ export default class Cart extends BaseModel {
     localKey: 'creatBy'
   })
   public user : BelongsTo<typeof User>
+  @manyToMany(() => Product,{
+    pivotTable: 'prod_cart'
+  })
+  public product : ManyToMany<typeof Product>
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

@@ -8,6 +8,7 @@ export default class Cart extends BaseSchema {
       table.increments('id').primary()
       table.integer('id_products').unsigned().references('id').inTable('products')
       table.integer('id_users').unsigned().references('id').inTable('users')
+      table.timestamps(true, true)
     })
   }
 

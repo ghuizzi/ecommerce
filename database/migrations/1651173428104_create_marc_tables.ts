@@ -7,6 +7,7 @@ export default class Marcs extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary()
       table.string('name').unique().notNullable()
+      table.timestamps(true, true)
     })
   }
 

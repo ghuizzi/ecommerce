@@ -24,7 +24,28 @@ Route.get('/', async () => {
   return { hello: 'world' }
 
 })
-Route.get('/users','UsersController.index')
-Route.resource('/marcs', 'MarcsController')
-// Route.put('/marcs/:id', 'MarcsController.update')
+// rutas de marcas 
+Route.get('/marcs', 'MarcsController.index')
+Route.get('/marcs/:id', 'MarcsController.show')
+Route.post('/marcs', 'MarcsController.store')
+Route.delete('/marcs/:1', 'MarcsController.destroy')
 
+// rutas de categorias
+Route.resource('/categories', 'CategoriesController' )
+
+// rutas de usuarios
+Route.get('/users', 'UsersController')
+Route.post('/users', 'UsersController.store')
+Route.put('/forgotpass/:id','UsersController.forgotpassword')
+//rutas de productos
+Route.get('/products', 'ProductsController.index')
+Route.get('/products/:id', 'ProductsController.show')
+Route.post('/products', 'ProductsController.store')
+Route.put('/products/:id', 'ProductsController.update')
+Route.delete('/products/:id', 'ProductsController.delete')
+//rutas de metodos
+Route.post('/payM', 'PayMethodsController.store')
+
+Route.post('/login','AuthController.login')
+
+Route.get('/product_cate', 'ProductsController.product_cate')

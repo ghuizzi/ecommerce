@@ -6,8 +6,9 @@ export default class ProductCate extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary()
-      table.integer('id_products').unsigned().references('id').inTable('products')
-      table.integer('id_category').unsigned().references('id').inTable('category')
+      table.integer('products_id').unsigned().references('products.id')
+      table.integer('category_id').unsigned().references('category.id')
+      table.unique(['products_id', 'category_id'])
     })
   }
 

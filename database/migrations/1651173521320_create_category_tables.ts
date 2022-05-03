@@ -8,6 +8,7 @@ export default class Category extends BaseSchema {
       table.increments('id').primary()
       table.string('name').unique().notNullable()
       table.boolean('status').notNullable()
+      table.timestamps(true, true)
     })
   }
 
