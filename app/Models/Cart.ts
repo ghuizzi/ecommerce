@@ -4,6 +4,7 @@ import User from './User'
 import Product from './Product'
 
 export default class Cart extends BaseModel {
+  public static table = 'carts'
   @column({ isPrimary: true })
   public id: number
 
@@ -11,10 +12,16 @@ export default class Cart extends BaseModel {
     localKey: 'creatBy'
   })
   public user : BelongsTo<typeof User>
+  
   @manyToMany(() => Product,{
-    pivotTable: 'prod_cart'
+    pivotTable: 'prod_carts'
   })
   public product : ManyToMany<typeof Product>
+  @column()
+  public units: number
+
+  @column()
+  public total: number
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

@@ -31,7 +31,8 @@ Route.post('/marcs', 'MarcsController.store')
 Route.delete('/marcs/:1', 'MarcsController.destroy')
 
 // rutas de categorias
-Route.resource('/categories', 'CategoriesController' )
+// Route.resource('/categories', 'CategoriesController' )
+Route.post('/categories', 'CategoriesController.store')
 
 // rutas de usuarios
 Route.get('/users', 'UsersController')
@@ -48,4 +49,10 @@ Route.post('/payM', 'PayMethodsController.store')
 
 Route.post('/login','AuthController.login')
 
-Route.get('/product_cate', 'ProductsController.product_cate')
+Route.get('/test', 'TestPivotsController.test')
+Route.get('/prodCart','TestPivotsController.prodCart')
+
+Route.get('/cart', 'CartsController.cart')
+Route.get('/cartPro', 'TestPivotsController.cartPro')
+Route.get('/categ', 'TestPivotsController.categ')
+Route.get('/carT', 'CartsController.carT')

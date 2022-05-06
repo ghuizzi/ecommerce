@@ -10,9 +10,15 @@ export default class CategoriesController {
 
 
     public async store({request, response}:HttpContextContract){
+        
         const { name, status } = request.body()
-        const category = await Database.insertQuery().table('category').insert({name, status})
-        return response.json(category)
+        const category = await Category.create({
+            name: name, 
+            status: status
+            
+          })
+          return response.json(category)
+    
     }
     public async show({ response, params}:HttpContextContract){
         const category = await Database.from('category').where('id', params.id).firstOrFail()

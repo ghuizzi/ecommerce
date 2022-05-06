@@ -23,7 +23,8 @@ export default class ProductsController {
                 price: price,
                 stock: stock,
                 status: status,
-                marcs_id: marcs_id
+                marcs_id: marcs_id,
+                
 
               })
               return response.json(product)

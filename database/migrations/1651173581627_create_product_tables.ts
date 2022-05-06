@@ -12,7 +12,7 @@ export default class Products extends BaseSchema {
       table.integer('stock').notNullable().defaultTo(1)
       table.boolean('status').notNullable().defaultTo(true)
       table.integer('marcs_id').unsigned().references('id').inTable('marcs')
-     table.timestamps(true, true)
+      table.timestamps(true, true)
       
     })
     

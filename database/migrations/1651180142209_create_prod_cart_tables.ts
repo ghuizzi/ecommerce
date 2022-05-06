@@ -1,12 +1,12 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
 export default class ProdCart extends BaseSchema {
-  protected tableName = 'prod_cart'
+  protected tableName = 'prod_carts'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-      table.integer('id_products').unsigned().references('id').inTable('products')
-      table.integer('id_cart').unsigned().references('id').inTable('cart')
+      table.integer('product_id').unsigned().references('products.id')
+      table.integer('cart_id').unsigned().references('carts.id')
     })
   }
 

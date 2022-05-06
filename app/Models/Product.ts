@@ -5,6 +5,8 @@ import Category from './Category'
 import Cart from './Cart'
 
 export default class Product extends BaseModel {
+  public static table = 'products'
+  
   @column({ isPrimary: true })
   public id: number
 
@@ -30,12 +32,18 @@ export default class Product extends BaseModel {
    localKey: 'creatBy'
  })public marc: BelongsTo<typeof Marc>
 
+//  @belongsTo(()=> Category,{
+//    localKey: 'creatBy'
+//  })
+//  public category: BelongsTo<typeof Category>
+
  @manyToMany(() => Category,{
-   pivotTable: 'category'
+   pivotTable: 'products_cate'
  })
  public category : ManyToMany<typeof Category>
+
  @manyToMany(() => Cart,{
-  pivotTable: 'prod_cart'
+  pivotTable: 'prod_carts'
 })
 public cart :ManyToMany<typeof Cart>
  
