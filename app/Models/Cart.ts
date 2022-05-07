@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, belongsTo, column, manyToMany, ManyToMany } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column, computed, manyToMany, ManyToMany } from '@ioc:Adonis/Lucid/Orm'
 import User from './User'
 import Product from './Product'
 
@@ -20,8 +20,19 @@ export default class Cart extends BaseModel {
   @column()
   public units: number
 
-  @column()
-  public total: number
+  // @column()
+  // public total: number
+
+  @computed()
+  public get total() {
+    const total  = new Product
+    const units  = new Cart
+    total.price   = [price]
+    units.units  = [units]
+    const tota  = total.price * units.units
+    console.log(tota)
+    return (tota)
+  }
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

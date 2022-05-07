@@ -10,7 +10,7 @@ export default class Cart extends BaseSchema {
       table.integer('id_product').unsigned().references('id').inTable('products')
       table.integer('id_user').unsigned().references('id').inTable('users')
       table.integer('units').notNullable()
-      table.decimal('total').notNullable()
+      
       table.timestamps(true, true)
     })
   }
