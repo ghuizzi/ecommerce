@@ -2,7 +2,7 @@ import React from "react";
 import bag from "./bag.png";
 import Products from "../products/Products";
 const Cart = ({ cart, setCart }) => {
-  console.log(cart);
+  // console.log(cart);
   return (
     <div>
       <img src={bag} alt="" />
