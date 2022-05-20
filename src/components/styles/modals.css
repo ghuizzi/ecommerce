@@ -1,0 +1,104 @@
+.modalbg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 39%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -387px;
+    margin-left: 0px;
+    
+    overflow-x:hidden 
+  }
+  
+  .modalContainer {
+    width: 500px;
+    height: 457px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 50px;
+  }
+   .modalContainer .tittle{
+    top: -77px;
+    margin-left: 173px;
+    max-width: 137px;
+    position: relative;
+    display: inline;
+  }
+  
+  .close {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    max-width: 50px;
+  }
+  
+  .modalContainer .modalBoddy {
+    
+   
+    margin-top: -24px;
+  }
+  
+   .modalBoddy img{
+    width: 172px;
+    margin-left: 0px;
+    margin-top: -78px;
+  }
+  .description {
+    margin-top: -148px;
+    margin-left: 183px;
+   
+  }
+  .label{
+    margin-top: 84px;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .cancelBtn {
+    background-color: crimson;
+  }
+  .insertImg{
+    width: 137px;
+    margin-left: 11px;
+  }
+  .inputImg{
+    top: -62px;
+    display: block;
+    position: relative;
+    width: 137px;
+  }

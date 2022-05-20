@@ -1,0 +1,36 @@
+.content{
+    display: inline-block;
+    width: 20%;
+    margin-left: 25px;
+}
+.containerPrincipal{
+    margin-top: -826px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: minmax(100px, 1fr);
+    gap: 4%;
+    
+    margin-left: 264px;
+    margin-right: -111px;
+}
+input{
+    display: inline-block;
+    width: 40px;
+    margin-bottom: 22px;
+}
+.tittle{
+    margin-bottom: 20px;
+}
+.tittle h4{
+    display: inline;
+}
+.tittle button{
+    display: flex;
+    position: relative;
+    margin-left: 89px;
+    margin-top: -20px;
+}
+.btn{
+    margin-right: 13px;
+    margin-bottom: 11px;
+}

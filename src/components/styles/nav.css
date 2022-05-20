@@ -1,0 +1,56 @@
+@import 'var.css';
+.nav{
+    background: var(--bg-gradient-r);
+    height: 7rem;
+   
+}
+.nav {
+    display: flex;
+    color: white;
+    font-size: 22px;
+}
+.enlaces{
+    display: inline;
+    
+    margin-top: 13px;
+}
+.search{
+    margin-left: 22px;
+    margin-top: 30px;
+    width: 41%;
+    justify-content: center;
+    align-items: center;
+}
+.search input{
+    
+    width: 83%;
+    border: none;
+    border-radius: 22px 0 0 22px;
+    font-size: 18px;
+    height: 30px;
+}
+.enlaces ul {
+    margin-top: -32px;
+}
+.search button{
+    border: none;
+    border-radius: 0 22px 22px 0;
+    height: 31px;
+}
+li{
+    display: inline-block;
+    list-style: none;
+}
+
+li a{
+    flex-direction: row;
+    color: white;
+    text-decoration: none;
+    padding: 11px;
+}
+.tittle-nav h1{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}

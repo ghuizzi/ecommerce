@@ -1,0 +1,18 @@
+@import '../styles/var.css';
+.buy{
+    width: 100%;
+    padding: 3%;
+    border-radius: 22px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    background: var(--bg-gradient-r);
+}
+.cant{
+    margin-bottom: 22px;
+    border-radius: 22px;
+    text-align: center;
+}
+.tittle{
+    color: var(--color-tittle);
+}

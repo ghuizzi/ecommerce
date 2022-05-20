@@ -1,0 +1,24 @@
+ .crud{
+    display: inline;
+    padding: 4px;
+   
+    justify-content: center;
+    margin-right: 22px;
+    margin-left: 20px;
+    margin-top: 11px;
+    border: none;
+    border-radius: 22px;
+    color: white;
+
+
+}
+
+.edit{
+    background: rgb(35, 165, 35);
+}
+.delete{
+    background: rgb(180, 19, 19);
+}
+.details-b{
+    background: rgb(33, 33, 177);
+}
