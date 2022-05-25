@@ -47,7 +47,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <div>
-        <Products addProduct={addProduct} products={products} />
+        {/* <Products addProduct={addProduct} products={products} /> */}
 
         <Cart cart={cart} />
       </div>

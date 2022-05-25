@@ -1,8 +1,8 @@
 import { api } from "./Config";
 import axios from "axios";
 
-export function getProduct() {
-  return axios.get(api.products.product_all_get);
+export async function getProduct() {
+  return await axios.get(api.products.product_all_get);
 }
 
 /**
@@ -18,6 +18,6 @@ export function getProduct() {
  * @param {objProduct} data data  product to store
  * @returns {import("axios").AxiosResponse} returns the response of the request
  */
-export function postProduct(data) {
-  return axios.post(api.products.register_product_post, data);
+export async function postProduct(data) {
+  return await axios.post(api.products.register_product_post, data);
 }

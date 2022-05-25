@@ -17,6 +17,9 @@ const Principal = () => {
 
   const [productoCard, setProductoCard] = useState([]);
 
+  getProduct().then(function (response) {
+    setProductoCard(response.data);
+  });
   return (
     <div className="content_pro">
       <div className="tittle-pro">

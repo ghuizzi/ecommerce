@@ -9,7 +9,7 @@ h1{
 .container{
    
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 25% 25% 25%;
     grid-template-rows: minmax(100px, 1fr);
     gap: 4%;
     margin-top: -645px;
@@ -29,8 +29,8 @@ h1{
 }
 
 .content_pro{
-    max-width: 80%;
-    width:100vw;
+    max-width: 100%;
+    
     overflow-x:hidden
 }
 

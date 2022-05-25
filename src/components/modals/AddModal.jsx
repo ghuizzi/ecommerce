@@ -1,15 +1,32 @@
 import React, { useRef, useState } from "react";
 import "../styles/modals.css";
+import PropTypes from "prop-types";
 
+const Componente = (props) => {
+  return (
+    <>
+      <p>{props.texto}</p>
+      <p>{props.numero}</p>
+      <p>{props.correo}</p>
+    </>
+  );
+};
+Componente.propTypes = {
+  texto: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+};
 const AddModal = ({ closeModal }) => {
-  const [text, setText] = useState("Hello World");
+  const [text, setText] = useState("");
 
   const refContainer = useRef(null);
-
+  const refInputName = useRef(null);
   const handleBtnSubmit = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const inputEl = refContainer.current.value;
+    const name = refInputName.current.value;
     console.log(inputEl);
+    console.log(name);
   };
   return (
     <div className="modalbg">
@@ -29,7 +46,7 @@ const AddModal = ({ closeModal }) => {
               Name:
               <input
                 type="text"
-                // name=""
+                ref={refInputName}
                 rows="3"
                 cols="40"
                 placeholder="Write something here"
