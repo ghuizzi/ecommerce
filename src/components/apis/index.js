@@ -21,3 +21,11 @@ export async function getProduct() {
 export async function postProduct(data) {
   return await axios.post(api.products.register_product_post, data);
 }
+/**
+ * Method delete product
+ * @param {id} data data  product to delete
+ * @returns {import("axios").AxiosResponse} returns the response of the request
+ */
+export async function deleteProduct(id) {
+  return await axios.delete(`${api.products.delete_product}${id}`);
+}

@@ -6,7 +6,7 @@ import DetailsModal from "../modals/DetailsModal";
 import EditModal from "../modals/EditModal";
 import "../styles/crud.css";
 import AsideCrud from "./AsideCrud";
-import { getProduct } from "../apis";
+import { deleteProduct, getProduct } from "../apis";
 import "./products.css";
 
 const Principal = () => {
@@ -20,6 +20,8 @@ const Principal = () => {
   getProduct().then(function (response) {
     setProductoCard(response.data);
   });
+  const handleDelete = () => {};
+  deleteProduct().then(function (response) {});
   return (
     <div className="content_pro">
       <div className="tittle-pro">
@@ -37,7 +39,7 @@ const Principal = () => {
       <AsideCrud />
       <div className="container containerPrincipal">
         {productoCard.map((item) => (
-          <div className="cart">
+          <div key={item.id} className="cart">
             <div className="name">
               <h4> {item.name}</h4>
             </div>
@@ -56,12 +58,7 @@ const Principal = () => {
                 >
                   Editar
                 </button>
-                <button
-                  onClick={() => {
-                    setDeleteModal(true);
-                  }}
-                  className="delete crud"
-                >
+                <button onClick={handleDelete()} className="delete crud">
                   Eliminar
                 </button>
                 <button

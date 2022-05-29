@@ -1,7 +1,5 @@
 const back = "http://127.0.0.1:3333/";
 const products = "products/";
-const id = "products/:id";
-
 export const api = {
   products: {
     // login_post: `${back} ${}`,
@@ -9,6 +7,6 @@ export const api = {
 
     register_product_post: back + products,
 
-    delete_product: back + products + id,
+    delete_product: back + products,
   },
 };
