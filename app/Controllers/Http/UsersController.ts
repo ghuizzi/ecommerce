@@ -12,7 +12,7 @@ export default class UsersController {
         
        
         try {
-          const product = await User.create({
+          const user = await User.create({
               name: name, 
               lastname: lastname,
               email: email,
@@ -20,7 +20,7 @@ export default class UsersController {
               details_user: details_user  
 
             })
-            return response.json(product)
+            return response.json(user)
         } catch (error) {
           
           return response.json(error)

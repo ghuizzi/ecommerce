@@ -7,6 +7,7 @@ export default class ProdCart extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.integer('product_id').unsigned().references('products.id')
       table.integer('cart_id').unsigned().references('carts.id')
+      table.integer('units').notNullable()
     })
   }
 

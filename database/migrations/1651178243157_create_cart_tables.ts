@@ -7,9 +7,9 @@ export default class Cart extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary()
-      table.integer('id_product').unsigned().references('id').inTable('products')
-      table.integer('id_user').unsigned().references('id').inTable('users')
-      table.integer('units').notNullable()
+      table.integer('user_id').unsigned().references('id').inTable('users')
+      table.boolean('status').defaultTo(true)
+     
       
       table.timestamps(true, true)
     })

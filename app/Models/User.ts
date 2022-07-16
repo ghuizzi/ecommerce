@@ -17,7 +17,7 @@ export default class User extends BaseModel {
   @column()
   public email: string
 
-  @column()
+  @column({ serializeAs: null })
   public password: string
 
   @column()
@@ -27,7 +27,7 @@ export default class User extends BaseModel {
   public details_user: string
 
   @hasMany(()=> Cart,{
-    foreignKey: 'creatBy'
+    foreignKey: 'user_id'
   })
   
   public cart : HasMany<typeof Cart>
